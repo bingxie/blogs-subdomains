@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_filter :load_blog
+  before_filter :load_blog, only: [:show]
 
   def index
     @blogs = Blog.all
