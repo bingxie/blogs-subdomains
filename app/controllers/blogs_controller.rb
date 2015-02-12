@@ -1,10 +1,11 @@
 class BlogsController < ApplicationController
+  before_filter :load_blog
+
   def index
     @blogs = Blog.all
   end
 
   def show
-    @blog = Blog.find_by_subdomain!(request.subdomain)
   end
 
   def new
