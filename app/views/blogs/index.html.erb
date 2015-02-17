@@ -10,4 +10,7 @@
   </div>
 <% end %>
 
+<p><%= link_to 'Home', root_url(subdomain: 'www') %></p>
+<p><%= link_to 'Home', root_url(subdomain: false) %></p>
+
 <p><%= link_to "New Blog", new_blog_path %></p>
